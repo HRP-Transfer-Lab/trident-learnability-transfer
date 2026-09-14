@@ -2,19 +2,21 @@
 
 This project tests whether cognitive transfer should be modelled not only as endpoint performance change, but also as **learnability**: the rate and dynamics by which a person acquires, reorganises, recovers and generalises a cognitive operation.
 
-## Construct transfer
+## Prospective hypothesis 1 — plateau-triggered construct breakthrough
 
-A trained cognitive operation becomes progressively less dependent on the particular task surface through which it was practised.
+A trained cognitive operation may become more portable when practice on a stable backbone is interrupted at genuine flattening by a controlled wrapper perturbation, followed by return to the original backbone.
 
 ```text
-same cognitive operation
-+ changed task surface
-+ retained or rapidly recovered performance
+BUILD → FLATTEN → PERTURB → ADAPT → RETURN → RECOVER → BREAKTHROUGH? → RESTABILISE
 ```
 
-## Learnability transfer
+The critical post-return outcome is not restricted to accuracy. A breakthrough may be expressed through greater capacity, better accuracy at matched demand, increased resistance to interference/lures, lower variability, improved response efficiency, faster recovery to the previous frontier, or extension beyond that frontier.
 
-Change in construct A may alter the subsequent learning dynamics of construct B when A provides a relevant enabling constraint for learning B.
+The theoretical proposal is that continued backbone repetition may increasingly compile a surface-specific policy, whereas a bounded wrapper perturbation reopens controlled search while preserving the invariant operation. Successful return then tests whether the operation has been reconstructed in a less surface-dependent form.
+
+## Prospective hypothesis 2 — cross-construct learnability transfer
+
+Successful learning of construct A may alter the subsequent learning dynamics of construct B when A provides a relevant enabling or rate-limiting constraint for learning B.
 
 The key distinction is between:
 
@@ -25,19 +27,55 @@ change in A correlates with change in B
 and the stronger temporal proposal:
 
 ```text
-earlier change in A predicts later learning rate in B
+earlier change in A predicts later learning rate or state-transition dynamics in B
 ```
 
 The reverse direction must also be tested.
 
-## Trident horizontal cycle
+A particularly important possibility is **bottleneck release** rather than continuous facilitation: B may not accelerate until A crosses a threshold or enters a more stable/portable regime.
+
+## Construct transfer
+
+A trained cognitive operation becomes progressively less dependent on the particular task surface through which it was practised.
 
 ```text
-BUILD → FLATTEN → PERTURB → ADAPT → RETURN → RECOVER → RESTABILISE
+same cognitive operation
++ changed task surface
++ retained or rapidly recovered performance
 ```
 
-The backbone task supplies the main longitudinal learning curve. A wrapper changes non-essential task characteristics while preserving the central cognitive operation. Transfer is assessed from perturbation cost, adaptation, return recovery, held-out transfer and delayed retention.
+The prospective wrapper protocol is therefore stronger than ordinary near-transfer testing because it uses the backbone trajectory itself as part of the intervention and outcome.
+
+## Learnability transfer
+
+Transfer can also be expressed as a change in the capacity to learn rather than only a change in current performance.
+
+Candidate signatures include:
+
+- steeper subsequent learning velocity;
+- earlier escape from a plateau;
+- reduced time to a stable frontier;
+- faster recovery after perturbation;
+- more favourable latent-state transitions;
+- greater later construct portability.
+
+## Mechanism-discovery strategy
+
+Existing longitudinal datasets cannot reproduce the deliberate Anchor–Perturb–Return intervention, but they can be used to compare competing transfer mechanisms before a prospective app trial.
+
+The project therefore runs a model tournament spanning task-specific fluency, surface-invariant operations, construct strengthening, learning-dynamics transfer, plateau/reorganisation, breadth/variation, general learnability, directed facilitation, reciprocal mutualism, bottleneck release, interference and state-gated transfer.
+
+See `docs/TRANSFER_MODEL_TOURNAMENT.md` for the M0–M11 definitions and predictions.
 
 ## Claim boundary
 
-Secondary-data analyses can test construct portability and temporal coupling of learning dynamics. They cannot by themselves establish that the prospective Anchor–Perturb–Return intervention causes broad far transfer.
+Secondary-data analyses can test construct portability, learning-dynamics predictors, natural plateau/breakthrough analogues and temporal coupling of learning across constructs. They cannot by themselves establish that the prospective Anchor–Perturb–Return intervention causes construct transfer, broad far transfer, or increased general intelligence.
+
+The intended sequence is therefore:
+
+```text
+retrospective mechanism discovery
+→ model comparison
+→ prospective construct-transfer experiment
+→ prospective cross-construct learnability experiment
+```
