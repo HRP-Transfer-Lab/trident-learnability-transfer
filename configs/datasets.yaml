@@ -1,0 +1,22 @@
+datasets:
+  cogito:
+    role: primary
+    access: application_required
+    target_analyses:
+      - construct_transfer
+      - cross_construct_learnability
+      - common_learnability
+    priority_task_pairs:
+      - spatial_3back_to_numerical_3back
+      - numerical_updating_to_spatial_updating
+      - alpha_span_to_animal_span
+  open_longitudinal:
+    role: pipeline_development
+    access: public_or_open
+    discovery_source: OpenCogData
+
+analysis:
+  primary_window_sizes: [5, 10]
+  minimum_sessions_for_curve: 10
+  bootstrap_participants: true
+  reverse_direction_models: true
