@@ -6,17 +6,70 @@ datasets:
       - construct_transfer
       - cross_construct_learnability
       - common_learnability
+      - state_sensitive_transfer
     priority_task_pairs:
       - spatial_3back_to_numerical_3back
       - numerical_updating_to_spatial_updating
       - alpha_span_to_animal_span
-  open_longitudinal:
-    role: pipeline_development
-    access: public_or_open
-    discovery_source: OpenCogData
+
+  lumosity_steyvers_schafer:
+    role: primary_open_backup
+    access: open_osf
+    scale: "36297 users; 51 tasks"
+    resolution: gameplay_score
+    target_analyses:
+      - learning_curve_prediction
+      - common_learnability
+      - cross_task_learnability
+      - domain_specific_learning
+      - model_tournament_M0_M9
+    notes:
+      - "No within-game trial decisions in the public raw dataset"
+      - "Naturalistic scheduling; not a controlled wrapper perturbation design"
+
+  naefgen_2023:
+    role: rapid_pipeline_development
+    access: public_via_opencogdata
+    scale: "58 participants; 20 sessions"
+    target_analyses:
+      - within_person_learning
+      - single_dual_task_coupling
+      - local_learning_velocity
+      - state_detection
+
+  cog_bci:
+    role: nuisance_state_and_eeg_validation
+    access: public_zenodo
+    scale: "29 participants; 3 sessions"
+    tasks:
+      - n_back
+      - flanker
+      - pvt
+      - matb_ii
+    target_analyses:
+      - overload_vs_learning_state
+      - vigilance
+      - workload
+      - eeg_validation
+
+  visuomotor_rotation:
+    role: ground_truth_state_transition_benchmark
+    access: public_openneuro
+    target_analyses:
+      - change_point_validation
+      - latent_state_validation
+
+  dallas_lifespan_ds004856:
+    role: broad_construct_replication
+    access: public_openneuro
+    target_analyses:
+      - longitudinal_construct_covariance
+      - common_change_factors
 
 analysis:
   primary_window_sizes: [5, 10]
   minimum_sessions_for_curve: 10
   bootstrap_participants: true
   reverse_direction_models: true
+  held_out_unit: participant
+  first_tournament: [M0, M1, M2, M3, M4, M5]
